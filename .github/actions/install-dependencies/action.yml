@@ -12,3 +12,5 @@ runs:
   steps:
     - name: 'Show Message'
       run: echo "Instalando Node versão ${{ inputs.node-version }}"
+      shell: bash
+
