@@ -1,0 +1,14 @@
+name: 'Hello World'
+description: 'First Action as a shared Template'
+
+inputs:
+  node-version:
+    description: 'Versão do Node.JS'
+    required: true
+
+runs:
+  using: 'composite'
+  
+  steps:
+    - name: 'Show Message'
+      run: echo "Instalando Node versão ${{ inputs.node-version }}"
