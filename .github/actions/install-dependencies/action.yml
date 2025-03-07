@@ -2,6 +2,12 @@ name: 'Hello World'
 description: 'First Action as a shared Template'
 
 inputs:
+  account-id:
+    description: 'AWS Account ID'
+    required: true
+  env-name:
+    description: 'Environment Name'
+    required: true
   node-version:
     description: 'Versão do Node.JS'
     required: true
@@ -11,6 +17,6 @@ runs:
   
   steps:
     - name: 'Show Message'
-      run: echo "Instalando Node versão ${{ inputs.node-version }}"
+      run: echo "Instalando Node versão ${{ inputs.node-version }} na conta ${{ inputs.account-id }} para o ambiente ${{ inputs.env-name }}"
       shell: bash
 
